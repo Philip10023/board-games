@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="" style="align-content: center; text-align: center;">
+    <div class="row">
+      <div class="flex">
+        <div>Strikes:</div>
+        <div [innerText]="this.strikes"></div><div>/ 5</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-xs-4">
+        <app-count-down [gameStatus]="this.gameStatus"></app-count-down>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <h3>Matching Game!</h3>
+        <button class="btn btn-default" type="submit" [disabled]="gameStatus" (click)="this.startGame()">START GAME</button>
+        <!-- <button class="btn btn-default" type="reset" (click)="this.endGame()">RESET GAME</button> -->
+        <app-timer (timeEnd)="this.timeEnd" (endGame)="endGame()" [disabledCard]="this.disabledCard"></app-timer>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <app-count-down [gameStatus]="this.gameStatus"></app-count-down>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div>
+        <app-card
+        [disabled]="this.disabledCards"
+        [notifier]="subject"
+        [disabledCards]="this.disabledCards"
+        [disabledCard]="disabledCard"
+        [toggleDisplay]="toggleDisplay"
+        [isShowFront]="isShowFront"
+        [isShowBack]="isShowBack"
+        (notifyParentAboutCard)="cardEventMethod($event)"
+        *ngFor="let cardEl of chosenCards"
+        [card]="cardEl"></app-card>
+      </div>
+    </div>
+    <div style="margin-top: 5%;" class="row">
+      <div style="font-size: 24px;" *ngIf="this.winner === true" class="flex">
+        <div>You Win!</div><div [innerText]="this.printTime"></div><div> Seconds Left!</div>
+      </div>
+    </div>
+  </div>
+</div>

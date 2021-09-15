@@ -1,0 +1,20 @@
+.matching-game-card {
+  padding: 5px 0 0 0 !important;
+  margin: 0 !important;
+}
+
+.card-img {
+  width: 100px;
+  height: 120px;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  position: fixed;
+}
+
+.card-name {
+  font-family: system-ui;
+  font-style: oblique;
+}
+

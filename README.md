@@ -1,4 +1,14 @@
-# FirstAngularApp
+# BoardGames
+
+ - [x] Create a home page for games
+ - [x] Create V1 Matching Game
+    - [x] Timer for increased pressure and difficulty
+    - [x] Strikes (5 incorrect and you lose)
+    - [x] All correct, then you win, with time left printed
+ - [ ] Update Matching Game to have difficulties
+ - [ ] Create Cee-lo
+ - [ ] Hopefully much more!
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 

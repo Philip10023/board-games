@@ -1,0 +1,5 @@
+<div class="col-xs-3 col-md-2 col-lg-2 matching-game-card" (click)="!disabledCard ? toggleDisplay($event, card) : ''">
+  <!-- <div class="card-name" style="padding: 0 0 0 0;" *ngIf="isShowFront">{{card.name}}</div> -->
+  <img class="card-img"  src="assets/cards/{{card.imgFront}}" *ngIf="isShowFront">
+  <img class="card-img" src="assets/cards/cardBack_blue2.png" *ngIf="isShowBack">
+</div>

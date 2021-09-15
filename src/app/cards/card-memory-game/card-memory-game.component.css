@@ -1,0 +1,18 @@
+.row {
+  margin: 0 !important;
+}
+
+.container {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.flex > div {
+  margin-left: 4px;
+}
